@@ -308,3 +308,9 @@ function elevatorDistance(array) {
   }
   return x;
 }
+
+//https://www.codewars.com/kata/5f5802bf4c2cc4001a6f859e
+const gridIndex = (grid, indices) => {
+  const x = grid.flat();
+  return indices.map(i => x[i-1]).join('');
+}
