@@ -314,3 +314,27 @@ const gridIndex = (grid, indices) => {
   const x = grid.flat();
   return indices.map(i => x[i-1]).join('');
 }
+
+
+//https://www.codewars.com/kata/coding-meetup-number-16-higher-order-functions-series-ask-for-missing-details
+function askForMissingDetails(list) {
+  return list.filter(person => {
+      for (var key in person) {
+          if (!person[key])
+              return person.question = 'Hi, could you please provide your ' + key + '.';
+      }
+  });
+}
+//Also
+function askForMissingDetails(list) {
+  return list.filter(function(a){
+
+    for(var key in a){
+      if (a[key] === null){
+        a['question'] = `Hi, could you please provide your ${key}.`;
+        return a;
+      }
+    }
+
+  });
+}
