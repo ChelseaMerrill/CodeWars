@@ -338,3 +338,34 @@ function askForMissingDetails(list) {
 
   });
 }
+
+//https://www.codewars.com/kata/5966e33c4e686b508700002d/train/javascript
+function sumStr(a,b) {
+  return String(Number(a)+Number(b));
+}
+
+//https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/solutions/javascript
+function removeChar(str) {
+  return str.slice(1, -1);
+}
+
+//https://www.codewars.com/kata/57a429e253ba3381850000fb/solutions/javascript
+function bmi(weight, height) {
+  var formula = (weight / Math.pow(height, 2));
+  switch (true) {
+    case formula <=18.5:
+    return 'Underweight';
+    case formula <=25.0:
+    return 'Normal';
+    case formula <=30:
+    return 'Overweight';
+    default:
+    return 'Obese';
+    
+  }
+}
+
+//https://www.codewars.com/kata/57a0885cbb9944e24c00008e/train/javascript
+function removeExclamationMarks(s) {
+  return s.replace(/!/g,'');
+ }
