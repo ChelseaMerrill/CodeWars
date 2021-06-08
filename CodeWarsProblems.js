@@ -369,3 +369,29 @@ function bmi(weight, height) {
 function removeExclamationMarks(s) {
   return s.replace(/!/g,'');
  }
+
+ //https://www.codewars.com/kata/51f9d93b4095e0a7200001b8/train/javascript
+ function howManyLightsabersDoYouOwn(name) {
+  if(name == 'Zach'){
+    return 18
+  } else{
+  return 0}
+}
+
+//https://www.codewars.com/kata/5b853229cfde412a470000d0/train/javascript
+function twiceAsOld(dadYearsOld, sonYearsOld) {
+  return (Math.abs(dadYearsOld-(sonYearsOld*2)))
+}
+
+//https://www.codewars.com/kata/57a2013acf1fa5bfc4000921/train/javascript
+function find_average(array) {
+  let x =0
+  for(let i=0; i<array.length; i++){
+    x += array[i]
+  } return x / (array.length)
+}
+
+function find_average(array) {
+  var sum = array.reduce((a, b) => a + b, 0);
+  return sum/array.length;
+}
