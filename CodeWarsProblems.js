@@ -395,3 +395,37 @@ function find_average(array) {
   var sum = array.reduce((a, b) => a + b, 0);
   return sum/array.length;
 }
+
+//https://www.codewars.com/kata/58649884a1659ed6cb000072
+function updateLight(current) {
+  if (current == 'green'){
+    return'yellow'
+  }if (current == 'yellow'){
+    return'red'
+  }if (current == 'red'){
+    return'green'
+  }
+}
+
+const updateLight = current =>
+  ({green: `yellow`, yellow: `red`, red: `green`})[current];
+
+//https://www.codewars.com/kata/6089c7992df556001253ba7d
+class Song {
+  constructor(title, artist){
+    this.title = title
+    this.artist = artist
+    this.cache = []
+  } 
+  howMany(array){
+    array = array.map(name => name.toLowerCase())
+    let newArray = [];
+    for(let i = 0; i < array.length; i++){
+      if(!this.cache.includes(array[i])){
+        newArray.push(array[i])
+        this.cache.push(array[i])
+      }
+    }
+    return newArray.length
+  }
+}
