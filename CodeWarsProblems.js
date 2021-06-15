@@ -415,17 +415,34 @@ class Song {
   constructor(title, artist){
     this.title = title
     this.artist = artist
-    this.cache = []
+    this.doubleUser = []
   } 
   howMany(array){
     array = array.map(name => name.toLowerCase())
-    let newArray = [];
+    let newArray = []
     for(let i = 0; i < array.length; i++){
-      if(!this.cache.includes(array[i])){
+      if(!this.doubleUser.includes(array[i])){
         newArray.push(array[i])
-        this.cache.push(array[i])
+        this.doubleUser.push(array[i])
       }
     }
     return newArray.length
   }
 }
+
+
+//://www.codewars.com/kata/5865a75da5f19147370000c7/javascript
+
+function addArrays(array1, array2) {
+  if (array1.length !== array2.length) throw 'not equal';
+  return array1.map((a,i) => a+array2[i])
+  }
+//AND
+  function addArrays(arr1, arr2) {
+    if(arr1.length !== arr2.length) return error;
+    let arr = []
+    for(let i = 0; i < arr1.length; i++) {
+      arr.push(arr1[i] + arr2[i])
+    }
+    return arr
+  }
